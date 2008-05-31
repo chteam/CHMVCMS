@@ -179,6 +179,28 @@ namespace YouXiArticle.Models
                 }
             }
         }
+        
+        private long _hits;
+
+        /// <summary>
+        /// Gets or sets the Hits column value.
+        /// </summary>
+        [Column(Name="Hits", Storage="_hits", DbType="bigint NOT NULL", CanBeNull=false)]
+        public long Hits
+        {
+            get { return _hits; }
+            set
+            {
+                if (_hits != value)
+                {
+                    OnHitsChanging(value);
+                    OnPropertyChanging("Hits");
+                    _hits = value;
+                    OnPropertyChanged("Hits");
+                    OnHitsChanged();
+                }
+            }
+        }
         #endregion
         
         #region Association Mapped Properties
@@ -312,6 +334,11 @@ namespace YouXiArticle.Models
         partial void OnAuthorChanging(string value);
         /// <summary>Called after Author has Changed.</summary>
         partial void OnAuthorChanged();
+        /// <summary>Called when Hits is changing.</summary>
+        /// <param name="value">The new value.</param>
+        partial void OnHitsChanging(long value);
+        /// <summary>Called after Hits has Changed.</summary>
+        partial void OnHitsChanged();
         #endregion
         
     }
