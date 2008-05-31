@@ -85,7 +85,7 @@ first child of the left and right table columns */
 page width. Or, you can specify an exact pixel width. */
 .page
 {
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -133,7 +133,7 @@ p#logo, h1#logo
 
 .leftColumn
 {
-    width: 25%;
+    width:400px;
     margin-right: 4%;
     float: left;
 }
@@ -141,7 +141,7 @@ p#logo, h1#logo
 .rightColumn
 {
     float: right;
-    width: 70%;
+    width:660px
 }
 
 #footer
