@@ -11,28 +11,21 @@ namespace YouXiArticle.Controllers
     {
         public ActionResult Login()
         {
-            // Add action logic here
 			return View();
         }
         #region Site
         [ActionMenu(Title="添加子站")]
         public ActionResult AddSite()
         {
-            // Response.Write("++");
-            //RenderView("AddSite");
 			return View();
         }
-        [ActionMenu(Title = "管理子站")]
+		[ActionMenu(Title = "管理子站")]
 		public ActionResult SiteList()
 		{
-            //RenderView("SiteList");
+			//RenderView("SiteList");
 			return View();
-        }
-		//[ActionMenu(Title = "设置")]
-		//public void SetSite()
-		//{
-		//    Response.Write(VelocityTools.GetTemplate("","index",new Dictionary()));
-		//}
+		}
+
 	
         public void AddSitePost()
         {
@@ -42,7 +35,7 @@ namespace YouXiArticle.Controllers
             this.DataContext.SubmitChanges();
 			GameTools.CreateGameDictionarys(si);
             TempData["msg"] = "添加成功";
-            RedirectToAction("AddSite");
+			this.RedirectToReferrer();
         }
         public void DeleteSite(string ID) {
             long i = 0;
@@ -60,15 +53,12 @@ namespace YouXiArticle.Controllers
 		#region Nav
 		public ActionResult Nav(long SiteID, long ModifyID)
 		{
-
 			var x = (from n in this.DataContext.SiteInfo
 					 where n.ID == SiteID
 					 select n).SingleOrDefault();
 			ViewData["SiteID"] = SiteID;
 			if (ModifyID == 0)
 			{
-				ViewData["HasArticle"] = new SelectList(OptionTools.HasArticle, "Key", "Value");
-				ViewData["HasUrl"] = new SelectList(OptionTools.HasUrl, "Key", "Value");
 				NavType nt = new NavType();
 				ViewData["NavType"] = new SelectList(nt.ToListItem(), "Value", "Text");
 			}
@@ -77,13 +67,13 @@ namespace YouXiArticle.Controllers
 				var u = DBExt.FindNavigation(ModifyID);
 				ViewData["Title"] = u.Title;
 				ViewData["Url"] = u.Url;
-				ViewData["HasArticle"] = new SelectList(OptionTools.HasArticle, "Key", "Value", u.HasArticle);
-				ViewData["HasUrl"] = new SelectList(OptionTools.HasUrl, "Key", "Value", u.HasUrl);
 				NavType nt = new NavType();
 				ViewData["NavType"] = new SelectList(nt.ToListItem(), "Value", "Text", u.NavType);
 			}
-			return View(x);
 
+			//this.HttpContext.Application["AdminTrubo"]
+			AdminTrubo.Add(x.Title, x.ID);
+			return View(x);
 		}
 		public void AddNav(long id)
 		{

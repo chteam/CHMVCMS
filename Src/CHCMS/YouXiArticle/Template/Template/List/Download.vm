@@ -1,0 +1,8 @@
+﻿##图片列表
+<ol>
+#foreach($item in $list)
+<li>
+$item.title <a href="$item.body">下载</a>
+</li>
+#end
+<ol>

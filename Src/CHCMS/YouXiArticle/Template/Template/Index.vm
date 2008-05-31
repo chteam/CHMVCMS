@@ -1,0 +1,6 @@
+
+        #parse("top.vm")
+    <div class="mainbox">
+    </div>
+
+        #parse("foot.vm")

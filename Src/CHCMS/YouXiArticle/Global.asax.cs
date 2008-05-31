@@ -30,11 +30,15 @@ namespace YouXiArticle
 				"{controller}/{action}/",
 				new { action = "Index" }
 			);
-
+			routes.MapRoute(
+			"Default2",
+			"",
+			new { controller = "Home", action = "Index"}
+		);
 			routes.MapRoute(
 				"Default",
 				"Default.aspx",
-				new { controller = "Home", action = "Index", id = "" }
+				new { controller = "Home", action = "Index" }
 			);
 		}
 

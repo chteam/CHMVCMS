@@ -1,0 +1,20 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>#if(${nav.Title})${nav.Title} -#end ${site.Title}</title>
+    <link rel="stylesheet" href="/Game/${site.domain}/style/style.css">
+    <base target="_blank">
+</head>
+<body leftmargin="0" rightmargin="0" topmargin="0">
+    <div id="header">
+        <h2>
+            <a href="/">${site.Title}</a>#if(${nav.Title}) - ${nav.Title}#end
+        </h2>
+    </div>
+    <br />
+    <div class="menu">
+$T.Navigations("Layouts/Navigation")
+    </div>
+    <br />
+    <br />
+

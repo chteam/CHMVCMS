@@ -6,6 +6,7 @@ namespace YouXiArticle.Models
 {
 	public class DBExt
 	{
+#region init
 		public ArticleDataContext DB { get; set; }
 		public DBExt()
 		{
@@ -15,12 +16,19 @@ namespace YouXiArticle.Models
 		{
 			DB = db;
 		}
+#endregion
 		public SiteInfo FindSiteInfo(string domain)
 		{
-
 			return (from s in DB.SiteInfo
 					where s.Domain == domain
 					select s).SingleOrDefault();
+		}
+		public IList<Navigation> GetNavigations(string domain)
+		{
+			return (from n in DB.Navigation
+					join s in DB.SiteInfo on n.SiteID equals s.ID
+					where s.Domain == domain
+					select n).ToList<Navigation>();
 		}
 		public void UploadNavigation(Navigation n)
 		{
@@ -63,11 +71,14 @@ namespace YouXiArticle.Models
 		}
 
 		public UrlAction FindUrl(long id){
-			return (from s in DB.SiteInfo
+			var r= (from s in DB.SiteInfo
 					join n in DB.Navigation on s.ID equals n.SiteID
 					join a in DB.UrlAction on n.ID equals a.NavigationID
 					where a.ID == id
 					select a).SingleOrDefault();
+			r.Hits++;
+			DB.SubmitChanges();
+			return r;
 		}
 		public IList<CommonArticle> GetArticles(Navigation nav)
 		{

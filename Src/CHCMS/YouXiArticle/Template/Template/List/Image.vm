@@ -1,0 +1,8 @@
+﻿##图片列表
+<ol>
+#foreach($item in $list)
+<li>
+<a href="$item.body"><img src="$item.body" alt="$item.title - $item.addtime" /></a>
+</li>
+#end
+<ol>

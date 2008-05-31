@@ -64,7 +64,7 @@ namespace YouXiArticle.Controllers
 				UrlAction u = DBExt.FindUrl(id);
 				ViewData["site"] = u.Navigation.SiteSiteInfo;
 				ViewData["nav"] = u.Navigation;
-				ViewData["content"] = a;
+				ViewData["content"] = u;
 			}
 			if (!GameTools.Exists(this.SubDomain))
 			{
@@ -72,7 +72,7 @@ namespace YouXiArticle.Controllers
 			}
 			else
 			{
-				return Content(VelocityTools.GetTemplate(this.SubDomain, "Article", ViewData));
+				return Content(VelocityTools.GetTemplate(this.SubDomain, "Article/" + navtype.ToString(), ViewData));
 			}
         }
     }

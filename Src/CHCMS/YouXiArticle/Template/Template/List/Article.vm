@@ -1,0 +1,7 @@
+﻿##文章链接列表
+#foreach($item in $list)
+
+<a href="$Url.Article($item.id)">$item.title</a> $item.addtime<br />
+
+#end
+$T.Pager($page, $everypage,$count)

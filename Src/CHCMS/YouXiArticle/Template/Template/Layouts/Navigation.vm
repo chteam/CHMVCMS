@@ -1,0 +1,3 @@
+﻿#foreach($i in $DB.getNavigations())
+<strong>[ <a href="#if($i.hasurl || $i.hasarticle)$Url.List($i) #else $i.url#end">$i.Title</a> ]</strong>
+#end

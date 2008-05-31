@@ -27,11 +27,9 @@ namespace YouXiArticle
 		{
 			this.Domain = domain;
 		}
-		public List<Navigation> GetNavigations()
+		public IList<Navigation> GetNavigations()
 		{
-			return (from n in this.DataContext.Navigation
-					where n.SiteSiteInfo.Domain == Domain
-					select n).ToList();
+			return DBExt.GetNavigations(this.Domain);
 		}
 	}
 }

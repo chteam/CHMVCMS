@@ -1,0 +1,25 @@
+﻿#if($page > 1)
+    #if ($page - 2 > 1)
+    <a href="1" title="第1页" class="page-size">« 第一页</a>
+        <span class="break">...</span>
+    #end 
+    <a href="$page - 1" title="第{0}页" class="page-size">< 上一页</a>
+#end
+#*
+#for($i in [2...6])
+    #if(($page + $i - 4)>= 1 && ($page + $i - 4) <= $count)
+        #if (4==$i)
+<span class="this-page">$page</span>
+        #else
+        <a href="$page + $i - 4" title="第$page + $i - 4页" class="page-size">$page+ $i - 4</a>
+        #end
+    #end
+#end
+*#
+#if($page < $count) 
+    <a href="${page} + 1" title="第1+$page页" class="page-size">下一页></a>
+    #if($page + 2 < $count)
+        <span class="break">...</span>
+        <a href="$count" title="第$count页" class="page-size">最后页»</a>
+    #end
+#end

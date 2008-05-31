@@ -1,0 +1,17 @@
+
+#parse("top.vm")
+
+<div class="mainbox">
+    #if($nav.hasarticle && $nav.hasurl) 
+        $T.UrlArticles($nav.id,null, $page, $everypage) 
+    #elseif($nav.hasarticle)
+        $T.Articles($nav.id,null,$page,$everypage) 
+    #elseif($nav.hasurl) 
+        $T.UrlActions($nav.id, null, $page, $everypage)
+    #end
+  
+</div>
+#parse("foot.vm")
+#*
+更新:$T.XXXXs的列表函数原传值为Navigation对象,现改为long型,即Navigation.ID
+*#
