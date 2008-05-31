@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Admin.Master" AutoEventWireup="true" CodeBehind="Url.aspx.cs" Inherits="YouXiArticle.Views.Admin.Url" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <form id="form1" runat="server">
     <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="YouXiArticle.Models.ArticleDataContext"
         Select="new (ID, Title, Url, AddTime)" TableName="UrlAction" 
@@ -36,6 +36,8 @@
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
     </asp:GridView>
     </form>
+    </asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
       <fieldset>
         <legend>
             <%

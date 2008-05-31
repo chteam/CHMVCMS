@@ -3,7 +3,7 @@
 
     <script src="/Editor/fckeditor.js" type="text/javascript"></script>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 
     <form id="form1" runat="server">
     <asp:LinqDataSource ID="LinqDataSource1" runat="server" 
@@ -41,6 +41,8 @@
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
     </asp:GridView>
     </form>
+    </asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <fieldset>
         <legend>
             <%
@@ -62,8 +64,8 @@
             { 
         %>
         <%=Html.Hidden("NavigationID")%><br />
-        栏目标题：<%=Html.TextBox("Title") %><br />
-        栏目地址：<%=Html.FckTextBox("Body",ViewData["Body"]) %>
+        标题：<%=Html.TextBox("Title") %><br />
+        内容：<%=Html.FckTextBox("Body",ViewData["Body"]) %>
         作者:<%=Html.TextBox("Author") %>
         <br />
         <%=Html.SubmitButton("提交") %>

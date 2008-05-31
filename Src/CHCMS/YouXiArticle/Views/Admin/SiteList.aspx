@@ -25,11 +25,11 @@
         </asp:TemplateField>
             <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" 
                 SortExpression="ID" />
-            <asp:BoundField DataField="Title" HeaderText="Title" ReadOnly="True" 
+            <asp:BoundField DataField="Title" HeaderText="站点名称" ReadOnly="True" 
                 SortExpression="Title" />
-            <asp:BoundField DataField="Domain" HeaderText="Domain" ReadOnly="True" 
+            <asp:BoundField DataField="Domain" HeaderText="域名" ReadOnly="True" 
                 SortExpression="Domain" />
-            <asp:BoundField DataField="StylePath" HeaderText="StylePath" ReadOnly="True" 
+            <asp:BoundField DataField="StylePath" HeaderText="所在文件夹" ReadOnly="True" 
                 SortExpression="StylePath" />
         </Columns>
         <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />

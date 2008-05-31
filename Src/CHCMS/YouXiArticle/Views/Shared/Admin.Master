@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.Master.cs" Inherits="YouXiArticle.Views.Shared.Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="page">
+        <div id="header">
+            <p id="logo">
+                <a href="">后台管理系统</a></p>
+            <ul id="mainMenu">
+                <%
+                    foreach (KeyValuePair<string, object> d in ClassTools.GetActionMenu(typeof(AdminController)))
+                    {
+
+                %>
+                <li>
+                    <%=Html.ActionLink(d.Value.ToString(),d.Key)%></li>
+                <%
+                    }
+                %>
+            </ul>
+        </div>
+        <div id="mainContent">
+            <div class="columnsContainer">
+                <div class="leftColumn">
+                    <h2>最后编辑</h2>
+                        
+                    <ul>
+                    <%foreach (Pair pr in AdminTrubo.Current.Reverse())
+                      { %>
+                      <li><%=Html.ActionLink<AdminController>(c=>c.Nav((long)pr.Second,0),pr.First.ToString()) %>
+                    </li><%} %>
+   
+                    </ul>
+                
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <!--/leftColumn-->
+                <div class="rightColumn">
+                  <div>
+                      <%
+                        if (TempData["msg"] != null)
+                        {
+                            Response.Write("信息：" + TempData["msg"]);
+                        }
+                    %>
+                    </div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <!--/rightColumn-->
+                <div class="clear">
+                </div>
+            </div>
+            <!--/columnsContainer-->
+            <div id="footer">
+                <p>
+                    CMS 2008
+                </p>
+            </div>
+            <!--/footer-->
+        </div>
+        <!--/mainContent-->
+    </div>
+    <!--/page-->
+</body>
+</html>

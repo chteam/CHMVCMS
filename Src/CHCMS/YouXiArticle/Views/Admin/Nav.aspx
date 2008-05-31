@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Admin.Master" AutoEventWireup="true" CodeBehind="Nav.aspx.cs" Inherits="YouXiArticle.Views.Admin.AddNav" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 
     <form id="form1" runat="server">
     <asp:LinqDataSource ID="LinqDataSource1" runat="server" 
@@ -14,7 +14,7 @@
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
          CellPadding="4" DataSourceID="LinqDataSource1" 
         ForeColor="#333333" GridLines="None" 
-       Width="659px">
+       Width="300px">
         <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
         <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
         <Columns>
@@ -30,8 +30,7 @@
                 SortExpression="ID" />
             <asp:BoundField DataField="Title" HeaderText="Title" ReadOnly="True" 
                 SortExpression="标题" />
-            <asp:BoundField DataField="Url" HeaderText="Url" ReadOnly="True" 
-                SortExpression="Url" />
+
                 <asp:TemplateField HeaderText="类型">
                 <ItemTemplate>
                 <%#Enum.GetName(typeof(NavType ),Eval("Navtype")) %>
@@ -45,7 +44,8 @@
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
     </asp:GridView>
         </form>
-
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 <fieldset>
 <legend>
@@ -70,8 +70,8 @@
     <%=Html.Hidden("SiteID")%><br />
     标题：<%=Html.TextBox("Title")%><br />
     地址：<%=Html.TextBox("Url")%><br />
-    <%=Html.Hidden("HasArticle",true)%>
-    <%=Html.Hidden("HasUrl",true)%>
+<%--    <%=Html.Hidden("HasArticle",true)%>
+    <%=Html.Hidden("HasUrl",true)%>--%>
     类型:<%=Html.DropDownList("Navtype")%>
     <%=Html.SubmitButton("提交")%>
     <%
