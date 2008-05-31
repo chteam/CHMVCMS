@@ -78,12 +78,12 @@ namespace YouXiArticle
 			StringWriter writer = new StringWriter();
 			//try
 			//{
-				Template template = VelocityTools.VelocityDict[Domain].GetTemplate(string.Format("{0}.vm", fn));
-				if (template != null)
-				{
-					template.Merge(context, writer);
-				}
-				return writer.GetStringBuilder().ToString();
+			Template template = VelocityTools.VelocityDict[Domain].GetTemplate(string.Format("{0}.vm", fn));
+			if (template != null)
+			{
+				template.Merge(context, writer);
+			}
+			return string.Format("<!--{0}-->{1}",fn,writer.GetStringBuilder().ToString());
 			//}catch(Exception e){
 			//    return string.Format("模板引擎对'{0}'解释错误:{1}", fn, e.Message);
 			//}

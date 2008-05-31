@@ -46,7 +46,7 @@ namespace YouXiArticle
 		/// <returns></returns>
 		public string Articles(long navid, string temp, int page, int everypage)
 		{
-			if (temp == null) temp = string.Format("List/{0}", navid);
+			////if (temp == null) temp = string.Format("List/{0}", navid);
 			var x = DBExt.GetArticles(navid);
 			Dictionary d = new Dictionary();
 			d.Add("count", x.Count);
