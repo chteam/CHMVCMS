@@ -65,7 +65,9 @@ namespace YouXiArticle
 			}
 			else
 			{
-				temp = "List/" + this.Navtype.ToString();
+				Navigation nav = (d["nav"] as Navigation);
+				NavType nt = (NavType)nav.NavType;
+				temp = "List/" +nt.ToString();
 			}
 			return VelocityTools.GetTemplate(this.Domain, temp, d);
 		}

@@ -47,7 +47,7 @@ namespace YouXiArticle
 		/// <returns></returns>
 		public string UrlActions(long navid, string temp, int page, int everypage)
 		{
-			if (temp == null) temp = string.Format("List/{0}", navid);
+			//if (temp == null) temp = string.Format("List/{0}", navid);
 			var x = DBExt.GetUrlActions(navid);
 			Dictionary d = new Dictionary();
 			d.Add("count", x.Count);
@@ -55,6 +55,7 @@ namespace YouXiArticle
 			d.Add("everypage", everypage);
 			var x1 = x.Skip((page - 1) * everypage).Take(everypage);
 			d.Add("list", x1);
+			d.Add("nav", DBExt.FindNavigation(navid));
 			//	d.Add("nav", nav);
 			return GetListTemplate(d, temp);
 		}

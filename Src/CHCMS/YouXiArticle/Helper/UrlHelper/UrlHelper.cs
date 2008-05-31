@@ -52,6 +52,11 @@ namespace YouXiArticle
 			return List(id,nt, page, 20);
 		}
 		#endregion
+
+		public string Article(long id, NavType nt)
+		{
+			return string.Format(root, this.Domain, nt.ToString() + "/" + id + ".html");
+		}
 		public string Article(long id) {
 			return string.Format(root, this.Domain, "Article/" + id + ".html");
 		}

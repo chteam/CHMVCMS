@@ -44,13 +44,13 @@
                 if (Request.QueryLong("ModifyID") != 0)
                 { 
             %>
-            正在修改"<%=ViewData["Title"]%>"栏目,
+            正在修改"<%=ViewData["Title"]%>"URL,
             <%=Html.ActionLink<AdminController>(c => c.Url(Request.QueryLong("ID"), 0), "新建")%>
             <%
                 }
     else
     {
-            %>正在添加新的栏目<%
+            %>正在添加新的URL<%
                           }
             %>
         </legend>

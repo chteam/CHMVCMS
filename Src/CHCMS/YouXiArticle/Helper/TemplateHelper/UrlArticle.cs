@@ -67,7 +67,7 @@ namespace YouXiArticle
 			d.Add("everypage", everypage);
 			var x1 = x.Skip((page - 1) * everypage).Take(everypage);
 			d.Add("list", x1);
-			//d.Add("nav", navid);
+			d.Add("nav", DBExt.FindNavigation(navid));
 			return GetListTemplate(d, temp);
 		}
 		#endregion
