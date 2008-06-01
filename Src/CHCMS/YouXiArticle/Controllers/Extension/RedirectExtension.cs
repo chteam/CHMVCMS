@@ -1,12 +1,9 @@
-﻿namespace YouXiArticle.Controllers
+﻿namespace System.Web.Mvc
 {
 	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
-	using System.Web.Mvc;
 	/// <summary>
 	/// 对Controller的Redirect操作的扩展
+	/// blog:http://chsword.cnblogs.com/
 	/// </summary>
 	public static class RedirectExtension
 	{
