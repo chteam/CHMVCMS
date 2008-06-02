@@ -57,6 +57,12 @@
     <Reference Include="System.Data.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System.Web.Abstractions, Version=0.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>E:\Program Files\Microsoft ASP.NET\ASP.NET MVC Preview 3\Assemblies\System.Web.Abstractions.dll</HintPath>
@@ -245,23 +251,6 @@
     <None Include="Editor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.cfm" />
     <None Include="Editor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php" />
     <None Include="Editor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.pl" />
-    <None Include="Template\Template\Article\Download.vm" />
-    <None Include="Template\Template\Article\Image.vm" />
-    <None Include="Template\Template\Article\Video.vm" />
-    <None Include="Template\Template\content.vm" />
-    <None Include="Template\Template\Foot.vm" />
-    <None Include="Template\Template\Index.vm" />
-    <None Include="Template\Template\Layouts\Navigation.vm" />
-    <None Include="Template\Template\Layouts\Pager.vm" />
-    <None Include="Template\Template\List\List.vm" />
-    <None Include="Template\Template\List\Image.vm" />
-    <None Include="Template\Template\List\Download.vm" />
-    <None Include="Template\Template\List\Article.vm" />
-    <None Include="Template\Template\List\Video.vm" />
-    <None Include="Template\Template\nvelocity.properties" />
-    <None Include="Template\Template\Top.vm" />
-    <None Include="Template\Template\List.vm" />
-    <None Include="Template\Template\Article\Article.vm" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

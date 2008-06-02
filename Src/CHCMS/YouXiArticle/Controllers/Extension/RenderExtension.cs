@@ -28,7 +28,7 @@
 		[Obsolete("仅在Asp.net Mvc Preview2中使用,PV3中已经提供新的方法Json")]
 		public static void RenderJSON(this Controller c, object data)
 		{
-			return c.RenderJSON(data, null);
+			c.RenderJSON(data, null);
 		}
 		/// <summary>
 		/// 将要显示的对象以JSON返回要客户端
@@ -39,7 +39,7 @@
 		[Obsolete("仅在Asp.net Mvc Preview2中使用,PV3中已经提供新的方法Json")]
 		public static void RenderJSON(this Controller c, object data, string contenttype)
 		{
-			return c.RenderJSON(data, contentType, null);
+			c.RenderJSON(data, contenttype, null);
 		}
 		/// <summary>
 		/// 将要显示的对象以JSON返回要客户端
@@ -66,7 +66,7 @@
 			}
 			if (data != null)
 			{
-				DataContractJsonSerializer sr = new DataContractJsonSerializer();
+				DataContractJsonSerializer sr = new DataContractJsonSerializer(typeof(object));
 				sr.WriteObject(response.OutputStream, data);
 			}
 		}

@@ -34,6 +34,7 @@ namespace YouXiArticle.Controllers
             this.DataContext.SiteInfo.InsertOnSubmit(si);
             this.DataContext.SubmitChanges();
 			GameTools.CreateGameDictionarys(si);
+			VelocityTools.Init();
             TempData["msg"] = "添加成功";
 			this.RedirectToReferrer();
         }
