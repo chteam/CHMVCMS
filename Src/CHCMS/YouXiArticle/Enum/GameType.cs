@@ -30,7 +30,7 @@ namespace YouXiArticle
 		大陆, 港台, 日韩, 欧美
 	}
 	public enum GameView { 二维, 三维 }
-	public enum GameStatus { 未测试, 封测, 内测, 公测, 收费, 永久免费, 部分免费, 停止运营 }
+	public enum GameStatus { 未测试, 封测, 内测, 公测, 收费, 永久免费, 部分免费, 停止运营,开发中 }
 	public enum GameStory { 武侠, 卡通, 奇幻, 历史, 科幻, 神话 }
 	//GameCompany	bigint	Checked
 }

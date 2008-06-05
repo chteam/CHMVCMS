@@ -17,6 +17,16 @@ namespace YouXiArticle.Controllers
         [ActionMenu(Title="添加子站")]
         public ActionResult AddSite()
         {
+			ViewData["GameType"] = new SelectList(new GameType().ToListItem(), "Value", "Text");
+			ViewData["GameArea"] = new SelectList(new GameArea().ToListItem(), "Value", "Text");
+			ViewData["GameView"] = new SelectList(new GameView().ToListItem(), "Value", "Text");
+			ViewData["GameStatus"] = new SelectList(new GameStatus().ToListItem(), "Value", "Text");
+			ViewData["GameStory"] = new SelectList(new GameStory().ToListItem(), "Value", "Text");
+			ViewData["Letter"] = new SelectList((
+				from i in "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".ToCharArray()
+				select i
+				).ToList());
+
 			return View();
         }
 		[ActionMenu(Title = "管理子站")]

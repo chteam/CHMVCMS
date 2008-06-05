@@ -15,6 +15,13 @@ namespace YouXiArticle
 {
 	static public class EnumExt
 	{
+		public static string GetName(this Enum en,int val)
+		{
+			return Enum.GetName(en.GetType(), val);
+		}
+		public static string GetName(this Enum en){
+			return Enum.GetName(en.GetType(), en);
+		}
 		public static IList<ListItem> ToListItem(this Enum en1)
 		{
 			

@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Admin.Master" AutoEventWireup="true" CodeBehind="Article.aspx.cs" Inherits="YouXiArticle.Views.Admin.Article" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <script src="/Editor/fckeditor.js" type="text/javascript"></script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 

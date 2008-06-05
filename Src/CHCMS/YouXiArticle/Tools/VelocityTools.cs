@@ -75,6 +75,7 @@ namespace YouXiArticle
 			context.Put("DB", new DBHelper(Domain));
 			context.Put("T", new TemplateHelper(Domain));
 			context.Put("Url", new UrlHelper(Domain));
+			context.Put("E", new EnumHelper());
 			StringWriter writer = new StringWriter();
 			//try
 			//{

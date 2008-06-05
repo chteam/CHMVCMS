@@ -105,12 +105,14 @@
     <Compile Include="Entity\CommonArticle.cs" />
     <Compile Include="Enum\ActionType.cs" />
     <Compile Include="Enum\EnumExt.cs" />
+    <Compile Include="Enum\GameType.cs" />
     <Compile Include="Enum\NavType.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\BaseHelper.cs" />
     <Compile Include="Helper\DBHelper\DBHelper.cs" />
+    <Compile Include="Helper\EnumHelper\EnumHelper.cs" />
     <Compile Include="Helper\MathHelper.cs" />
     <Compile Include="Helper\TemplateHelper\Article.cs" />
     <Compile Include="Helper\TemplateHelper\TemplateHelper.cs" />
@@ -118,6 +120,7 @@
     <Compile Include="Helper\TemplateHelper\UrlArticle.cs" />
     <Compile Include="Helper\TemplateHelper\Navigation.cs" />
     <Compile Include="Helper\TemplateHelper\Pager.cs" />
+    <Compile Include="Helper\TemplateHelper\SiteInfo.cs" />
     <Compile Include="Helper\UrlHelper\UrlHelper.cs" />
     <Compile Include="Models\Entity\Article.cs" />
     <Compile Include="Models\Entity\Article.Generated.cs">

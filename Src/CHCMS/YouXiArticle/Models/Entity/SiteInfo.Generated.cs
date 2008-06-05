@@ -133,6 +133,446 @@ namespace YouXiArticle.Models
                 }
             }
         }
+        
+        private Nullable<int> _gameType;
+
+        /// <summary>
+        /// Gets or sets the GameType column value.
+        /// </summary>
+        [Column(Name="GameType", Storage="_gameType", DbType="int")]
+        public Nullable<int> GameType
+        {
+            get { return _gameType; }
+            set
+            {
+                if (_gameType != value)
+                {
+                    OnGameTypeChanging(value);
+                    OnPropertyChanging("GameType");
+                    _gameType = value;
+                    OnPropertyChanged("GameType");
+                    OnGameTypeChanged();
+                }
+            }
+        }
+        
+        private Nullable<int> _gameArea;
+
+        /// <summary>
+        /// Gets or sets the GameArea column value.
+        /// </summary>
+        [Column(Name="GameArea", Storage="_gameArea", DbType="int")]
+        public Nullable<int> GameArea
+        {
+            get { return _gameArea; }
+            set
+            {
+                if (_gameArea != value)
+                {
+                    OnGameAreaChanging(value);
+                    OnPropertyChanging("GameArea");
+                    _gameArea = value;
+                    OnPropertyChanged("GameArea");
+                    OnGameAreaChanged();
+                }
+            }
+        }
+        
+        private Nullable<int> _gameView;
+
+        /// <summary>
+        /// Gets or sets the GameView column value.
+        /// </summary>
+        [Column(Name="GameView", Storage="_gameView", DbType="int")]
+        public Nullable<int> GameView
+        {
+            get { return _gameView; }
+            set
+            {
+                if (_gameView != value)
+                {
+                    OnGameViewChanging(value);
+                    OnPropertyChanging("GameView");
+                    _gameView = value;
+                    OnPropertyChanged("GameView");
+                    OnGameViewChanged();
+                }
+            }
+        }
+        
+        private Nullable<int> _gameStatus;
+
+        /// <summary>
+        /// Gets or sets the GameStatus column value.
+        /// </summary>
+        [Column(Name="GameStatus", Storage="_gameStatus", DbType="int")]
+        public Nullable<int> GameStatus
+        {
+            get { return _gameStatus; }
+            set
+            {
+                if (_gameStatus != value)
+                {
+                    OnGameStatusChanging(value);
+                    OnPropertyChanging("GameStatus");
+                    _gameStatus = value;
+                    OnPropertyChanged("GameStatus");
+                    OnGameStatusChanged();
+                }
+            }
+        }
+        
+        private Nullable<int> _gameStory;
+
+        /// <summary>
+        /// Gets or sets the GameStory column value.
+        /// </summary>
+        [Column(Name="GameStory", Storage="_gameStory", DbType="int")]
+        public Nullable<int> GameStory
+        {
+            get { return _gameStory; }
+            set
+            {
+                if (_gameStory != value)
+                {
+                    OnGameStoryChanging(value);
+                    OnPropertyChanging("GameStory");
+                    _gameStory = value;
+                    OnPropertyChanged("GameStory");
+                    OnGameStoryChanged();
+                }
+            }
+        }
+        
+        private Nullable<long> _gameCompany;
+
+        /// <summary>
+        /// Gets or sets the GameCompany column value.
+        /// </summary>
+        [Column(Name="GameCompany", Storage="_gameCompany", DbType="bigint")]
+        public Nullable<long> GameCompany
+        {
+            get { return _gameCompany; }
+            set
+            {
+                if (_gameCompany != value)
+                {
+                    OnGameCompanyChanging(value);
+                    OnPropertyChanging("GameCompany");
+                    _gameCompany = value;
+                    OnPropertyChanged("GameCompany");
+                    OnGameCompanyChanged();
+                }
+            }
+        }
+        
+        private Nullable<System.DateTime> _beginTime;
+
+        /// <summary>
+        /// Gets or sets the BeginTime column value.
+        /// </summary>
+        [Column(Name="BeginTime", Storage="_beginTime", DbType="smalldatetime")]
+        public Nullable<System.DateTime> BeginTime
+        {
+            get { return _beginTime; }
+            set
+            {
+                if (_beginTime != value)
+                {
+                    OnBeginTimeChanging(value);
+                    OnPropertyChanging("BeginTime");
+                    _beginTime = value;
+                    OnPropertyChanged("BeginTime");
+                    OnBeginTimeChanged();
+                }
+            }
+        }
+        
+        private string _summary;
+
+        /// <summary>
+        /// Gets or sets the Summary column value.
+        /// </summary>
+        [Column(Name="Summary", Storage="_summary", DbType="ntext", UpdateCheck=UpdateCheck.Never)]
+        public string Summary
+        {
+            get { return _summary; }
+            set
+            {
+                if (_summary != value)
+                {
+                    OnSummaryChanging(value);
+                    OnPropertyChanging("Summary");
+                    _summary = value;
+                    OnPropertyChanged("Summary");
+                    OnSummaryChanged();
+                }
+            }
+        }
+        
+        private string _developer;
+
+        /// <summary>
+        /// Gets or sets the Developer column value.
+        /// </summary>
+        [Column(Name="Developer", Storage="_developer", DbType="nvarchar(50)")]
+        public string Developer
+        {
+            get { return _developer; }
+            set
+            {
+                if (_developer != value)
+                {
+                    OnDeveloperChanging(value);
+                    OnPropertyChanging("Developer");
+                    _developer = value;
+                    OnPropertyChanged("Developer");
+                    OnDeveloperChanged();
+                }
+            }
+        }
+        
+        private string _runCompany;
+
+        /// <summary>
+        /// Gets or sets the RunCompany column value.
+        /// </summary>
+        [Column(Name="RunCompany", Storage="_runCompany", DbType="nvarchar(50)")]
+        public string RunCompany
+        {
+            get { return _runCompany; }
+            set
+            {
+                if (_runCompany != value)
+                {
+                    OnRunCompanyChanging(value);
+                    OnPropertyChanging("RunCompany");
+                    _runCompany = value;
+                    OnPropertyChanged("RunCompany");
+                    OnRunCompanyChanged();
+                }
+            }
+        }
+        
+        private string _baseConfig;
+
+        /// <summary>
+        /// Gets or sets the BaseConfig column value.
+        /// </summary>
+        [Column(Name="BaseConfig", Storage="_baseConfig", DbType="ntext", UpdateCheck=UpdateCheck.Never)]
+        public string BaseConfig
+        {
+            get { return _baseConfig; }
+            set
+            {
+                if (_baseConfig != value)
+                {
+                    OnBaseConfigChanging(value);
+                    OnPropertyChanging("BaseConfig");
+                    _baseConfig = value;
+                    OnPropertyChanged("BaseConfig");
+                    OnBaseConfigChanged();
+                }
+            }
+        }
+        
+        private string _pushConfig;
+
+        /// <summary>
+        /// Gets or sets the PushConfig column value.
+        /// </summary>
+        [Column(Name="PushConfig", Storage="_pushConfig", DbType="nchar(10)")]
+        public string PushConfig
+        {
+            get { return _pushConfig; }
+            set
+            {
+                if (_pushConfig != value)
+                {
+                    OnPushConfigChanging(value);
+                    OnPropertyChanging("PushConfig");
+                    _pushConfig = value;
+                    OnPropertyChanged("PushConfig");
+                    OnPushConfigChanged();
+                }
+            }
+        }
+        
+        private Nullable<System.DateTime> _testTime;
+
+        /// <summary>
+        /// Gets or sets the TestTime column value.
+        /// </summary>
+        [Column(Name="TestTime", Storage="_testTime", DbType="smalldatetime")]
+        public Nullable<System.DateTime> TestTime
+        {
+            get { return _testTime; }
+            set
+            {
+                if (_testTime != value)
+                {
+                    OnTestTimeChanging(value);
+                    OnPropertyChanging("TestTime");
+                    _testTime = value;
+                    OnPropertyChanged("TestTime");
+                    OnTestTimeChanged();
+                }
+            }
+        }
+        
+        private string _testName;
+
+        /// <summary>
+        /// Gets or sets the TestName column value.
+        /// </summary>
+        [Column(Name="TestName", Storage="_testName", DbType="nvarchar(50)")]
+        public string TestName
+        {
+            get { return _testName; }
+            set
+            {
+                if (_testName != value)
+                {
+                    OnTestNameChanging(value);
+                    OnPropertyChanging("TestName");
+                    _testName = value;
+                    OnPropertyChanged("TestName");
+                    OnTestNameChanged();
+                }
+            }
+        }
+        
+        private string _letter;
+
+        /// <summary>
+        /// Gets or sets the Letter column value.
+        /// </summary>
+        [Column(Name="Letter", Storage="_letter", DbType="nvarchar(1)")]
+        public string Letter
+        {
+            get { return _letter; }
+            set
+            {
+                if (_letter != value)
+                {
+                    OnLetterChanging(value);
+                    OnPropertyChanging("Letter");
+                    _letter = value;
+                    OnPropertyChanged("Letter");
+                    OnLetterChanged();
+                }
+            }
+        }
+        
+        private string _website;
+
+        /// <summary>
+        /// Gets or sets the Website column value.
+        /// </summary>
+        [Column(Name="Website", Storage="_website", DbType="nvarchar(250)")]
+        public string Website
+        {
+            get { return _website; }
+            set
+            {
+                if (_website != value)
+                {
+                    OnWebsiteChanging(value);
+                    OnPropertyChanging("Website");
+                    _website = value;
+                    OnPropertyChanged("Website");
+                    OnWebsiteChanged();
+                }
+            }
+        }
+        
+        private string _bBsSite;
+
+        /// <summary>
+        /// Gets or sets the BBsSite column value.
+        /// </summary>
+        [Column(Name="BBsSite", Storage="_bBsSite", DbType="nvarchar(250)")]
+        public string BBsSite
+        {
+            get { return _bBsSite; }
+            set
+            {
+                if (_bBsSite != value)
+                {
+                    OnBBsSiteChanging(value);
+                    OnPropertyChanging("BBsSite");
+                    _bBsSite = value;
+                    OnPropertyChanged("BBsSite");
+                    OnBBsSiteChanged();
+                }
+            }
+        }
+        
+        private string _gamePic;
+
+        /// <summary>
+        /// Gets or sets the GamePic column value.
+        /// </summary>
+        [Column(Name="GamePic", Storage="_gamePic", DbType="nvarchar(250)")]
+        public string GamePic
+        {
+            get { return _gamePic; }
+            set
+            {
+                if (_gamePic != value)
+                {
+                    OnGamePicChanging(value);
+                    OnPropertyChanging("GamePic");
+                    _gamePic = value;
+                    OnPropertyChanged("GamePic");
+                    OnGamePicChanged();
+                }
+            }
+        }
+        
+        private string _english;
+
+        /// <summary>
+        /// Gets or sets the English column value.
+        /// </summary>
+        [Column(Name="English", Storage="_english", DbType="nvarchar(50)")]
+        public string English
+        {
+            get { return _english; }
+            set
+            {
+                if (_english != value)
+                {
+                    OnEnglishChanging(value);
+                    OnPropertyChanging("English");
+                    _english = value;
+                    OnPropertyChanged("English");
+                    OnEnglishChanged();
+                }
+            }
+        }
+        
+        private string _telphone;
+
+        /// <summary>
+        /// Gets or sets the Telphone column value.
+        /// </summary>
+        [Column(Name="Telphone", Storage="_telphone", DbType="nvarchar(50)")]
+        public string Telphone
+        {
+            get { return _telphone; }
+            set
+            {
+                if (_telphone != value)
+                {
+                    OnTelphoneChanging(value);
+                    OnPropertyChanging("Telphone");
+                    _telphone = value;
+                    OnPropertyChanged("Telphone");
+                    OnTelphoneChanged();
+                }
+            }
+        }
         #endregion
         
         #region Association Mapped Properties
@@ -249,6 +689,106 @@ namespace YouXiArticle.Models
         partial void OnStylePathChanging(string value);
         /// <summary>Called after StylePath has Changed.</summary>
         partial void OnStylePathChanged();
+        /// <summary>Called when GameType is changing.</summary>
+        /// <param name="value">The new value.</param>
+        partial void OnGameTypeChanging(Nullable<int> value);
+        /// <summary>Called after GameType has Changed.</summary>
+        partial void OnGameTypeChanged();
+        /// <summary>Called when GameArea is changing.</summary>
+        /// <param name="value">The new value.</param>
+        partial void OnGameAreaChanging(Nullable<int> value);
+        /// <summary>Called after GameArea has Changed.</summary>
+        partial void OnGameAreaChanged();
+        /// <summary>Called when GameView is changing.</summary>
+        /// <param name="value">The new value.</param>
+        partial void OnGameViewChanging(Nullable<int> value);
+        /// <summary>Called after GameView has Changed.</summary>
+        partial void OnGameViewChanged();
+        /// <summary>Called when GameStatus is changing.</summary>
+        /// <param name="value">The new value.</param>
+        partial void OnGameStatusChanging(Nullable<int> value);
+        /// <summary>Called after GameStatus has Changed.</summary>
+        partial void OnGameStatusChanged();
+        /// <summary>Called when GameStory is changing.</summary>
+        /// <param name="value">The new value.</param>
+        partial void OnGameStoryChanging(Nullable<int> value);
+        /// <summary>Called after GameStory has Changed.</summary>
+        partial void OnGameStoryChanged();
+        /// <summary>Called when GameCompany is changing.</summary>
+        /// <param name="value">The new value.</param>
+        partial void OnGameCompanyChanging(Nullable<long> value);
+        /// <summary>Called after GameCompany has Changed.</summary>
+        partial void OnGameCompanyChanged();
+        /// <summary>Called when BeginTime is changing.</summary>
+        /// <param name="value">The new value.</param>
+        partial void OnBeginTimeChanging(Nullable<System.DateTime> value);
+        /// <summary>Called after BeginTime has Changed.</summary>
+        partial void OnBeginTimeChanged();
+        /// <summary>Called when Summary is changing.</summary>
+        /// <param name="value">The new value.</param>
+        partial void OnSummaryChanging(string value);
+        /// <summary>Called after Summary has Changed.</summary>
+        partial void OnSummaryChanged();
+        /// <summary>Called when Developer is changing.</summary>
+        /// <param name="value">The new value.</param>
+        partial void OnDeveloperChanging(string value);
+        /// <summary>Called after Developer has Changed.</summary>
+        partial void OnDeveloperChanged();
+        /// <summary>Called when RunCompany is changing.</summary>
+        /// <param name="value">The new value.</param>
+        partial void OnRunCompanyChanging(string value);
+        /// <summary>Called after RunCompany has Changed.</summary>
+        partial void OnRunCompanyChanged();
+        /// <summary>Called when BaseConfig is changing.</summary>
+        /// <param name="value">The new value.</param>
+        partial void OnBaseConfigChanging(string value);
+        /// <summary>Called after BaseConfig has Changed.</summary>
+        partial void OnBaseConfigChanged();
+        /// <summary>Called when PushConfig is changing.</summary>
+        /// <param name="value">The new value.</param>
+        partial void OnPushConfigChanging(string value);
+        /// <summary>Called after PushConfig has Changed.</summary>
+        partial void OnPushConfigChanged();
+        /// <summary>Called when TestTime is changing.</summary>
+        /// <param name="value">The new value.</param>
+        partial void OnTestTimeChanging(Nullable<System.DateTime> value);
+        /// <summary>Called after TestTime has Changed.</summary>
+        partial void OnTestTimeChanged();
+        /// <summary>Called when TestName is changing.</summary>
+        /// <param name="value">The new value.</param>
+        partial void OnTestNameChanging(string value);
+        /// <summary>Called after TestName has Changed.</summary>
+        partial void OnTestNameChanged();
+        /// <summary>Called when Letter is changing.</summary>
+        /// <param name="value">The new value.</param>
+        partial void OnLetterChanging(string value);
+        /// <summary>Called after Letter has Changed.</summary>
+        partial void OnLetterChanged();
+        /// <summary>Called when Website is changing.</summary>
+        /// <param name="value">The new value.</param>
+        partial void OnWebsiteChanging(string value);
+        /// <summary>Called after Website has Changed.</summary>
+        partial void OnWebsiteChanged();
+        /// <summary>Called when BBsSite is changing.</summary>
+        /// <param name="value">The new value.</param>
+        partial void OnBBsSiteChanging(string value);
+        /// <summary>Called after BBsSite has Changed.</summary>
+        partial void OnBBsSiteChanged();
+        /// <summary>Called when GamePic is changing.</summary>
+        /// <param name="value">The new value.</param>
+        partial void OnGamePicChanging(string value);
+        /// <summary>Called after GamePic has Changed.</summary>
+        partial void OnGamePicChanged();
+        /// <summary>Called when English is changing.</summary>
+        /// <param name="value">The new value.</param>
+        partial void OnEnglishChanging(string value);
+        /// <summary>Called after English has Changed.</summary>
+        partial void OnEnglishChanged();
+        /// <summary>Called when Telphone is changing.</summary>
+        /// <param name="value">The new value.</param>
+        partial void OnTelphoneChanging(string value);
+        /// <summary>Called after Telphone has Changed.</summary>
+        partial void OnTelphoneChanged();
         #endregion
         
     }
