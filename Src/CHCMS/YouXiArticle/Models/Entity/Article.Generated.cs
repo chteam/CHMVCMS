@@ -40,11 +40,15 @@ namespace YouXiArticle.Models
         #endregion
         
         #region Column Mapped Properties
-        
+		private string _title;
+		private string _body;
         private long _iD = default(long);
-
+		private System.DateTime _addTime;
+		private long _navigationID;
+		private string _author;
+		private long _hits;
         /// <summary>
-        /// Gets the ID column value.
+        /// ID,编号
         /// </summary>
         [Column(Name="ID", Storage="_iD", DbType="bigint NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, CanBeNull=false)]
         public long ID
@@ -62,11 +66,9 @@ namespace YouXiArticle.Models
                 }
             }
         }
-        
-        private string _title;
 
         /// <summary>
-        /// Gets or sets the Title column value.
+        /// 文章标题
         /// </summary>
         [Column(Name="Title", Storage="_title", DbType="nvarchar(50) NOT NULL", CanBeNull=false)]
         public string Title
@@ -84,11 +86,9 @@ namespace YouXiArticle.Models
                 }
             }
         }
-        
-        private string _body;
 
         /// <summary>
-        /// Gets or sets the Body column value.
+        /// 内容
         /// </summary>
         [Column(Name="Body", Storage="_body", DbType="ntext NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
         public string Body
@@ -107,10 +107,8 @@ namespace YouXiArticle.Models
             }
         }
         
-        private System.DateTime _addTime;
-
         /// <summary>
-        /// Gets or sets the AddTime column value.
+        ///　提交时间
         /// </summary>
         [Column(Name="AddTime", Storage="_addTime", DbType="smalldatetime NOT NULL", CanBeNull=false)]
         public System.DateTime AddTime
@@ -128,11 +126,9 @@ namespace YouXiArticle.Models
                 }
             }
         }
-        
-        private long _navigationID;
 
         /// <summary>
-        /// Gets or sets the NavigationID column value.
+        /// 所在栏目
         /// </summary>
         [Column(Name="NavigationID", Storage="_navigationID", DbType="bigint NOT NULL", CanBeNull=false)]
         public long NavigationID
@@ -154,11 +150,9 @@ namespace YouXiArticle.Models
                 }
             }
         }
-        
-        private string _author;
 
         /// <summary>
-        /// Gets or sets the Author column value.
+        /// 作者
         /// </summary>
         [Column(Name="Author", Storage="_author", DbType="nvarchar(50) NOT NULL", CanBeNull=false)]
         public string Author
@@ -176,11 +170,9 @@ namespace YouXiArticle.Models
                 }
             }
         }
-        
-        private long _hits;
 
         /// <summary>
-        /// Gets or sets the Hits column value.
+        /// 点击数
         /// </summary>
         [Column(Name="Hits", Storage="_hits", DbType="bigint NOT NULL", CanBeNull=false)]
         public long Hits
